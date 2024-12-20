@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkusze Stylów</title>
+
+    <!-- Zewnętrzny arkusz stylów -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Alternatywne arkusze stylów -->
+    <link rel="alternate stylesheet" type="text/css" href="style1.css" title="Nazwa 1">
+    <link rel="alternate stylesheet" type="text/css" href="style2.css" title="Nazwa 2">
+
+    <!-- Import arkusza stylów -->
+    <style type="text/css">
+        @import url("external-style.css");
+    </style>
+
+    <!-- Wewnętrzny arkusz stylów -->
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .inline-style {
+            font-weight: bold;
+            color: red;
+        }
+
+        .internal-style {
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .highlight {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Przykłady Arkuszy Stylów</h1>
+
+    <p><span class="highlight">1) Zewnętrzny arkusz stylów.</span><br>
+        <code>&lt;link rel="Stylesheet" type="text/css" href="style.css" /&gt;</code>
+    </p>
+
+    <p><span class="highlight">2) Styl lokalny inaczej:</span> (styl wpisany, liniowy, linijkowy, w linii) czyli dopisanie arkusza do wybranego bloku treści strony.<br>
+        <code>&lt;selektor style="cecha1: wartość1; cecha2: wartość2;"&gt;...&lt;/selektor&gt;</code>
+    </p>
+
+    <p><span class="highlight">3) Wewnętrzny arkusz stylów.</span><br>
+        <code>
+          &lt;style type="text/css"&gt;<br>
+            selektor1 { cecha: wartość; cecha2: wartość2; }<br>
+            selektor2 { cecha: wartość; cecha2: wartość2; }<br>
+          &lt;/style&gt;
+        </code>
+    </p>
+
+    <p><span class="highlight">4) Alternatywny arkusz stylów.</span><br>
+        <code>
+               &lt;link rel="Stylesheet" type="text/css" href="style.css" title="Nazwa domyślna"&gt;<br>
+               &lt;link rel="Alternate stylesheet" type="text/css" href="style1.css" title="Nazwa 1"&gt;<br>
+               &lt;link rel="Alternate stylesheet" type="text/css" href="style2.css" title="Nazwa 2"&gt;
+        </code>
+    </p>
+
+    <p><span class="highlight">5) Import arkusza stylów.</span><br>
+        <code>
+            &lt;style type="text/css"&gt;<br>
+                       @import url(adres zewnętrznego arkusza stylów);<br>
+            &lt;/style&gt;
+        </code>
+    </p>
+</body>
+</html>
